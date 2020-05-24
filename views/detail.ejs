@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre Argentina</title>
+    <!-- Font Awesome Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- Bootstrap Grid Stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Own Stylesheet -->
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <% include ./partials/header.ejs %>
+    <!-- /Header -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="detalle">
+                <h3>Detalle del producto:<%= productFind.name %></h3>
+            </div>
+        </div>
+        <div class="container main-container">
+            <div class="row justify-content-center">
+                <div class="linea col-12 col-lg-7">
+                    <img src="/images/<%= productFind.image %>" alt="Iphone 11">
+
+                    <h4 class="description"><%= productFind.description %></h4>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <div class="titulo">
+                        <h1> <%= productFind.name %></h1>
+                    </div>
+                    <div class="precio1">
+                        <h4 class="verde"> <strike>$ <%= productFind.price %></strike> / <%= productFind.discount %> %
+                            OFF</h4>
+                    </div>
+                    <div class="precio2">
+                        <h1 class="precio">$<%= formatPrice (productFind.price, productFind.discount) %> </h1>
+                    </div>
+
+                    <div class="extra">
+                        <article class="pagar">
+                            <i class="fas fa-credit-card"> </i>
+                            <p>Pagá en 12 cuotas sin interés</p>
+                        </article>
+
+                        <article class="pagar">
+                            <i class="fas fa-store"></i>
+                            <p> Retiro gratis en locales del vendedor</p>
+                        </article>
+                    </div>
+                    <div class="boton justify-content-center">
+                        <button type="button" class="btn btn-primary btn-lg active">COMPRAR AHORA</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--FOOTER-->
+    <%- include('partials/footer') %>
+
+</body>
+
+</html>

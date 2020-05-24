@@ -318,3 +318,57 @@ input {
     margin: auto;
   }
 }
+
+
+
+/*detail*/
+.precio1{
+  color: #39b54a;
+}
+.pagar i{
+  color: #39b54a;
+  float: left;
+  position: relative;
+  top:18px;
+  font-size: 1.7em;
+  padding-right: 5px;
+}
+.pagar p{
+  float: left;
+  margin-top: 6px;
+  font-size: 25px;
+}
+.extra{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+}
+
+.titulo{
+  padding: 8px;
+}
+.titulo h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.detalle{
+  padding: 10px;
+}
+.detalle h3{
+  font-size: 20px;
+  color: #666666;
+}
+.description{
+  padding: 8px;
+}
+
+.main-container{
+  background-color: white;
+  padding: 10px;
+}
+.linea{
+  border-right: 1px solid #ebebeb;
+}
+
