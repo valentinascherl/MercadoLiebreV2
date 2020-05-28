@@ -140,7 +140,7 @@ const formatPrice = (price,discount) => toThousand(Math.round(price*(1-(discount
 
 let indexController = {
     index: function (req, res){
-    res.render('index', { productosAMostrar: listadoProductos });
+    res.render('index', { productosAMostrar: listadoProductos, toThousand, formatPrice });
   }
 }
 
